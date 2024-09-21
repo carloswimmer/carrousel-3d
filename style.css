@@ -1,9 +1,114 @@
+@import url("https://fonts.cdnfonts.com/css/ica-rubrik-black");
+@import url("https://fonts.cdnfonts.com/css/poppins");
+
 .background {
   background: linear-gradient(135deg, #fed622, #ee8018);
-  padding: 20px;
-  border-radius: 10px;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
 }
 
-.central-image {
-  height: 80vh;
+.banner {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner .slider {
+  position: absolute;
+  width: 180px;
+  height: 250px;
+  top: 10%;
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 20s linear infinite;
+  z-index: 1;
+}
+
+.banner .slider .item {
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: rotateY(
+      calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+    )
+    translateZ(550px);
+}
+
+.banner .slider .item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  opacity: 0.93;
+}
+
+.banner .content {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1600px, 100vw);
+  height: max-content;
+  /* padding-bottom: 20px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.banner .content h1 {
+  font-family: "ICA Rubrik";
+  font-size: 16em;
+  line-height: 1em;
+  color: #535d5e;
+  position: relative;
+}
+
+.banner .content h1::after {
+  position: absolute;
+  inset: 0 0 0 0;
+  content: attr(data-content);
+  z-index: 2;
+  -webkit-text-stroke: 2px #d2d2d2;
+  color: transparent;
+}
+
+.banner .content .author {
+  font-family: "Poppins";
+  text-align: right;
+  max-width: 300px;
+  color: #323a3b;
+}
+
+.banner .content .author h2 {
+  font-size: 3em;
+  line-height: 0.5em;
+}
+
+.banner .content .author p:first-of-type {
+  font-weight: 700;
+}
+
+.banner .content .model {
+  background-image: url(assets/BlueBoy.webp);
+  width: 100%;
+  height: 95vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-size: auto 90%;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+@keyframes autoRun {
+  from {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+  }
 }

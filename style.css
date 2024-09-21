@@ -1,0 +1,9 @@
+.background {
+  background: linear-gradient(135deg, #fed622, #ee8018);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.central-image {
+  height: 80vh;
+}

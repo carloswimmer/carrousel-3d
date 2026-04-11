@@ -117,7 +117,8 @@
 .gallery {
   width: calc(100% - 64px);
   height: 100vh;
-  margin: 0 32px 32px;
+  max-width: 1800px;
+  margin: 0 auto;
 }
 
 .gallery .title {

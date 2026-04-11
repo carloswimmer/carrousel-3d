@@ -148,4 +148,10 @@
   width: 100%;
   border-radius: 16px;
   margin-bottom: 16px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery .images img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }

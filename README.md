@@ -1,6 +1,8 @@
 # Carousel 3D
 
-A **pure HTML and CSS** experiment: a circular 3D image carousel with perspective, rotation, and layout polish — **No JavaScript** required.
+A **pure HTML and CSS** experiment: a circular 3D image carousel with perspective, rotation, and layout polish.
+
+**No JavaScript** required.
 
 [**View live on GitHub Pages →**](https://carloswimmer.github.io/carrousel-3d/)
 

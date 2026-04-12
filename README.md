@@ -24,11 +24,14 @@ It is a focused study of how far you can push **3D transforms**, **custom proper
 - **No JavaScript** — behavior comes from HTML structure and CSS only
 - **3D carousel** — cards arranged on a circle with depth and perspective
 - **Gallery link** — cards navigate to a secondary page (`gallery.html`)
+- **View Transitions** — navigating between the gallery grid and full-size viewer pages uses the cross-document View Transitions API in supporting browsers (e.g. Chromium); there is no JavaScript. Other browsers fall back to normal navigation.
 - **Responsive-minded layout** — styled for a strong full-page presentation
 
 ## Run locally
 
 Clone the repo and open `index.html` in a browser (double-click or use your OS file command).
+
+To exercise **cross-document View Transitions** (gallery ↔ viewer), serve the project over HTTP (for example `python3 -m http.server` from the repo root) and open `http://localhost:8000/gallery.html`. Opening files via `file://` may not run the transition animation reliably.
 
 ```sh
 git clone https://github.com/carloswimmer/carrousel-3d.git
